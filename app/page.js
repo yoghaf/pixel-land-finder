@@ -32,7 +32,7 @@ export default function Home() {
                       setNumberLandOne(e.target.value);
                     }}
                     className="h-10 w-full  border border-gray-300 rounded-md px-3"
-                    type="text"
+                    type="number"
                     name="name"
                     placeholder="Enter land"
                   />
@@ -45,16 +45,21 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberOne(landNumberOne - 1);
+                    const landtonumber = parseInt(numberLandOne);
+                    setLandNumberOne(landtonumber - 1);
+                    setNumberLandOne(landtonumber - 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Prev
                 </button>
+                <h3>{landNumberOne}</h3>
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberOne(landNumberOne + 1);
+                    const landtonumber = parseInt(numberLandOne);
+                    setLandNumberOne(landtonumber + 1);
+                    setNumberLandOne(landtonumber + 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
@@ -92,7 +97,7 @@ export default function Home() {
                       setNumberLandTwo(e.target.value);
                     }}
                     className="h-10 w-full  border border-gray-300 rounded-md px-3"
-                    type="text"
+                    type="number"
                     name="name"
                     placeholder="Enter land"
                   />
@@ -105,16 +110,21 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberTwo(landNumberTwo - 1);
+                    const landtonumber = parseInt(numberLandTwo);
+                    setLandNumberTwo(landtonumber - 1);
+                    setNumberLandTwo(landtonumber - 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Prev
                 </button>
+                <h3>{landNumberTwo}</h3>
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberTwo(landNumberTwo + 1);
+                    const landtonumber = parseInt(numberLandTwo);
+                    setLandNumberTwo(landtonumber + 1);
+                    setNumberLandTwo(landtonumber + 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
@@ -152,7 +162,7 @@ export default function Home() {
                       setNumberLandThree(e.target.value);
                     }}
                     className="h-10 w-full  border border-gray-300 rounded-md px-3"
-                    type="text"
+                    type="number"
                     name="name"
                     placeholder="Enter land"
                   />
@@ -165,16 +175,21 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberThree(landNumberThree - 1);
+                    const landtonumber = parseInt(numberLandThree);
+                    setLandNumberThree(landtonumber - 1);
+                    setNumberLandThree(landtonumber - 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Prev
                 </button>
+                <h3>{landNumberThree}</h3>
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberThree(landNumberThree + 1);
+                    const landtonumber = parseInt(numberLandThree);
+                    setLandNumberThree(landtonumber + 1);
+                    setNumberLandThree(landtonumber + 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
@@ -212,7 +227,7 @@ export default function Home() {
                       setNumberLandFour(e.target.value);
                     }}
                     className="h-10 w-full  border border-gray-300 rounded-md px-3"
-                    type="text"
+                    type="number"
                     name="name"
                     placeholder="Enter land"
                   />
@@ -225,16 +240,21 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberFour(landNumberFour - 1);
+                    const landtonumber = parseInt(numberLandFour);
+                    setLandNumberFour(landtonumber - 1);
+                    setNumberLandFour(landtonumber - 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Prev
                 </button>
+                <h3>{landNumberFour}</h3>
                 <button
                   type="button"
                   onClick={() => {
-                    setLandNumberFour(landNumberFour + 1);
+                    const landtonumber = parseInt(numberLandFour);
+                    setLandNumberFour(landtonumber + 1);
+                    setNumberLandFour(landtonumber + 1);
                   }}
                   className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
