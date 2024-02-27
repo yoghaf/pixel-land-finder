@@ -2,19 +2,49 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [landNumberOne, setLandNumberOne] = useState(1);
-  const [numberLandOne, setNumberLandOne] = useState(1);
-  const [landNumberTwo, setLandNumberTwo] = useState(1);
-  const [numberLandTwo, setNumberLandTwo] = useState(1);
-  const [landNumberThree, setLandNumberThree] = useState(1);
-  const [numberLandThree, setNumberLandThree] = useState(1);
-  const [landNumberFour, setLandNumberFour] = useState(1);
-  const [numberLandFour, setNumberLandFour] = useState(1);
-  const [landNumberFive, setLandNumberFive] = useState(1);
-  const [numberLandFive, setNumberLandFive] = useState(1);
-  const [landNumberSix, setLandNumberSix] = useState(1);
-  const [numberLandSix, setNumberLandSix] = useState(1);
+  function generateUniqueNumber(existingNumbers) {
+  let randomNumber;
+  do {
+    randomNumber = Math.floor(Math.random() * 5000) + 1;
+  } while (existingNumbers.includes(randomNumber));
+  return randomNumber;
+}
 
+const generateUniqueNumbers = () => {
+  const numbers = [];
+  for (let i = 0; i < 6; i++) {
+    let newNumber;
+    do {
+      newNumber = generateUniqueNumber(numbers);
+    } while (newNumber === landNumberOne || newNumber === landNumberTwo || newNumber === landNumberThree || newNumber === landNumberFour || newNumber === landNumberFive || newNumber === landNumberSix);
+    numbers.push(newNumber);
+  }
+  return numbers;
+};
+
+const generateUniqueNumberLands = () => {
+  const numbers = generateUniqueNumbers();
+  const numberLands = [];
+  for (let i = 0; i < 6; i++) {
+    numberLands.push(Math.floor(Math.random() * 5000) + 1);
+  }
+  return numberLands;
+};
+
+const [landNumberOne, setLandNumberOne] = useState(generateUniqueNumbers()[0]);
+const [landNumberTwo, setLandNumberTwo] = useState(generateUniqueNumbers()[1]);
+const [landNumberThree, setLandNumberThree] = useState(generateUniqueNumbers()[2]);
+const [landNumberFour, setLandNumberFour] = useState(generateUniqueNumbers()[3]);
+const [landNumberFive, setLandNumberFive] = useState(generateUniqueNumbers()[4]);
+const [landNumberSix, setLandNumberSix] = useState(generateUniqueNumbers()[5]);
+
+const [numberLandOne, setNumberLandOne] = useState(generateUniqueNumberLands()[0]);
+const [numberLandTwo, setNumberLandTwo] = useState(generateUniqueNumberLands()[1]);
+const [numberLandThree, setNumberLandThree] = useState(generateUniqueNumberLands()[2]);
+const [numberLandFour, setNumberLandFour] = useState(generateUniqueNumberLands()[3]);
+const [numberLandFive, setNumberLandFive] = useState(generateUniqueNumberLands()[4]);
+const [numberLandSix, setNumberLandSix] = useState(generateUniqueNumberLands()[5]);
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-10">
       <h1 className="font-semibold text-2xl">Pixel find land by Utomo Yoga</h1>
