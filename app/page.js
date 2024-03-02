@@ -117,10 +117,10 @@ export default function Home({ initialLandNumbers }) {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3  h-screen w-full">
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full">
         {/* number one */}
         <div className="  items-center p-2  w-full">
-          <div className=" flex flex-col h-full">
+          <div className=" flex flex-col h-[500px]">
             <div>
               <form
                 onSubmit={(e) => {
@@ -313,6 +313,63 @@ export default function Home({ initialLandNumbers }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="p-5  w-1/3 flex justify-between">
+        <button
+          type="button"
+          onClick={() => {
+            const landtonumberOne = parseInt(numberLandOne);
+            const landtonumberTwo = parseInt(numberLandTwo);
+            const landtonumberThree = parseInt(numberLandThree);
+            const landtonumberFour = parseInt(numberLandFour);
+            const landtonumberFive = parseInt(numberLandFive);
+            const landtonumberSix = parseInt(numberLandSix);
+            setLandNumberOne(landtonumberOne - 1);
+            setNumberLandOne(landtonumberOne - 1);
+            setLandNumberTwo(landtonumberTwo - 1);
+            setNumberLandTwo(landtonumberTwo - 1);
+            setLandNumberThree(landtonumberThree - 1);
+            setNumberLandThree(landtonumberThree - 1);
+            setLandNumberFour(landtonumberFour - 1);
+            setNumberLandFour(landtonumberFour - 1);
+            setLandNumberFive(landtonumberFive - 1);
+            setNumberLandFive(landtonumberFive - 1);
+            setLandNumberSix(landtonumberSix - 1);
+            setNumberLandSix(landtonumberSix - 1);
+          }}
+          className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Prev All
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            const landtonumberOne = parseInt(numberLandOne);
+            const landtonumberTwo = parseInt(numberLandTwo);
+            const landtonumberThree = parseInt(numberLandThree);
+            const landtonumberFour = parseInt(numberLandFour);
+            const landtonumberFive = parseInt(numberLandFive);
+            const landtonumberSix = parseInt(numberLandSix);
+            setLandNumberOne(landtonumberOne + 1);
+            setNumberLandOne(landtonumberOne + 1);
+            setLandNumberTwo(landtonumberTwo + 1);
+            setNumberLandTwo(landtonumberTwo + 1);
+            setLandNumberThree(landtonumberThree + 1);
+            setNumberLandThree(landtonumberThree + 1);
+            setLandNumberFour(landtonumberFour + 1);
+            setNumberLandFour(landtonumberFour + 1);
+            setLandNumberFive(landtonumberFive + 1);
+            setNumberLandFive(landtonumberFive + 1);
+            setLandNumberSix(landtonumberSix + 1);
+            setNumberLandSix(landtonumberSix + 1);
+          }}
+          className="bg-blue-500 h-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Next All
+        </button>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full">
         {/* number four */}
         <div className="  items-center p-2  w-full">
           <div className=" flex flex-col h-[500px]">
