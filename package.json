@@ -1,7 +1,7 @@
 {
   "name": "land-finder",
-  "version": "0.1.0",
-  "private": true,
+  "version": "2.2.2",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "jasuke": "^1.1.4",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "tehgejrot": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoghaf/pixel-land-finder.git"
   }
 }
